@@ -1,33 +1,71 @@
 /* GERNERALES ----------------------------------------------------------------------- */
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-.centrar-contenido{
+
+p {
+    font-family: "Inter", system-ui, sans-serif;
+}
+
+html{
+    background-color: #F5E6D3;
+}
+
+.titulos{
+    font-family: "Playfair Display", Georgia, serif;
+    text-transform: uppercase;
+    color: #A0522D;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+}
+
+.centrar-contenido {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.texto-principal {
+    font-weight: 400;
+    font-size: 11pt;
+    line-height: 1.6;
+    color: #000;
+}
+
+.botones {
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
 /* INDEX ----------------------------------------------------------------------------*/
 
 
 /* DETALLE PRODUCTO -----------------------------------------------------------------*/
-.detalle-producto{
+.detalle-producto {
     width: 100%;
 
 }
-.detalle-producto img{
+
+.detalle-producto img {
     width: 30%;
     max-width: 100%;
     height: auto;
 }
-.bloque{
+
+.bloque {
     max-width: 70%;
 }
-.bloque div{
+
+.bloque div {
     padding: 10px;
 }
-.bloque button{
+
+.bloque button {
     padding: 10px 15px;
+    border-radius: 13px;
+    border: none;
+    cursor: pointer;
 }
