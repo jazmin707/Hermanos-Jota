@@ -4,7 +4,30 @@
     margin: 0;
     padding: 0;
 }
+.centrar-contenido{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /* INDEX ----------------------------------------------------------------------------*/
 
 
 /* DETALLE PRODUCTO -----------------------------------------------------------------*/
+.detalle-producto{
+    width: 100%;
+
+}
+.detalle-producto img{
+    width: 30%;
+    max-width: 100%;
+    height: auto;
+}
+.bloque{
+    max-width: 70%;
+}
+.bloque div{
+    padding: 10px;
+}
+.bloque button{
+    padding: 10px 15px;
+}
