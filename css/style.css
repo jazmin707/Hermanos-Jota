@@ -38,7 +38,14 @@ html{
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.08em;
+    background-color: #C47A6D;
+    color: #F5E6D3;
+   
 }
+.botones:hover {
+    background-color: #a86255; /* más oscuro al pasar */
+}
+
 
 /* INDEX ----------------------------------------------------------------------------*/
 
@@ -50,17 +57,21 @@ html{
 }
 
 .detalle-producto img {
-    width: 30%;
+    width: 50%;
     max-width: 100%;
     height: auto;
 }
 
 .bloque {
-    max-width: 70%;
+    max-width: 90%;
 }
 
 .bloque div {
     padding: 10px;
+}
+
+.bloque div h1{
+    padding: 0 0 10px;
 }
 
 .bloque button {
