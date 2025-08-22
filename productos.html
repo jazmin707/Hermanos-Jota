@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Catalogo de Productos</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="./imagenes/logo-principal.svg" alt="Mueblería Hermanos Jota" width="120">
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="contacto.html" class="activo">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="carrito">
+            <img src="/imagenes/cart.svg" alt="Carrito de compras" width="30">
+            <span id="contador-carrito">0</span>
+        </div>
+    </header>
+
+    <h1> Bienvenidos al catalogo de productos</h1>
+
+    <h3> Aqui encontraran todos nuestros productos disponibles</h3>
+    
+    <form method="get" id="busqueda"> 
+        <label for="busqueda"></label>
+        <input type="search" name="busqueda" id="busqueda" placeholder="Buscar...">
+        <!-- <button type="submit">Buscar</button> -->
+    </form>
+    
+    <div class="grilla"> 
+        <!-- El archivo JS va a mostrarlas (?) -->
+    </div>
+     <!-- <script src=".js"> </script> -->
+</body>
+
+</html>
