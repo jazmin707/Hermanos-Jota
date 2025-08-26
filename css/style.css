@@ -152,7 +152,8 @@ nav ul li a:hover {
 }
 
 .bloque div h1{
-    padding: 0 0 10px;
+    margin: 0 0 20px;
+
 }
 
 .bloque button {
@@ -170,6 +171,15 @@ nav ul li a:hover {
     border-radius: 17px;
 }
 
+.detalles{
+    margin: 10px 0 10px 0;
+    font-size: 11pt;
+}
+
+.clave{
+    color: #C47A6D;
+    text-transform: capitalize;
+}
 /* RESPONSIVE --------------------------------------------------------------------*/
 
 @media (max-width: 952px) {
@@ -214,6 +224,54 @@ nav ul li a:hover {
     }
 }
 
+@media (max-width: 768px) {
+    .detalle-producto .bloque {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .detalle-producto img {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .bloque div {
+        padding: 0 10px;
+    }
+
+     .centrar-contenido {
+        flex-direction: column;
+    }
+
+    .titulos {
+        font-size: 20px;
+    }
+
+    .texto-principal,
+    .detalles {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .precio {
+        font-size: 16px;
+        padding: 6px 12px;
+        margin-bottom: 10px;
+    }
+
+    .botones {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    footer .contacto-info {
+        padding: 0 10px;
+    }
+}
 /* ----------------- CONTACTO ----------------- */
 
 main {
