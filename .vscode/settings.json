@@ -1,3 +1,4 @@
 {
-    "vscode-pets.theme": "winter"
+    "vscode-pets.theme": "winter",
+    "liveServer.settings.port": 5501
 }

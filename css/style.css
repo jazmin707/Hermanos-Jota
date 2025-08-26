@@ -21,6 +21,7 @@ html{
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    text-align: center;
 }
 
 .subtitulos{
@@ -50,7 +51,7 @@ html{
     letter-spacing: 0.08em;
     background-color: #C47A6D;
     color: #F5E6D3;
-   
+    border: none;
 }
 .botones:hover {
     background-color: #a86255; /* más oscuro al pasar */
