@@ -7,19 +7,79 @@
     <title> Catálogo de Productos </title>
 </head>
 <body>
-    <h1> Bienvenido al Catálogo de Productos </h1>
-    <p> Aquí encontrarás una variedad de productos de <strong>Mueblería Hermanos Jota</strong> disponibles para ti. </p>
-    <form action="buscar.html" method="get">
-        <label for="busqueda"></label>
-        <input type="text" id="busqueda" name="busqueda" placeholder="Ingresa el nombre del producto">
-        <button type="submit">Buscar</button>
-    </form>
-    </div>
+        <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="./imagenes/logo-principal.svg" alt="Mueblería Hermanos Jota">
+            </a>
+        </div>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="bi bi-list"></i>
+            </label>
 
-    <div class="grilla" id="grilla-productos"> 
-    <!-- El archivo de JS las va a mostrar (?) -->
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="carrito">
+            <i class="bi bi-cart-fill"></i>
+            <span id="contador-carrito">0</span>
+        </div>
+    </header>
+    <section class="centrar-contenido">
+    <h1 class="titulos"> Bienvenido al Catálogo de Productos </h1>
+    </section>
+    <section class="centrar-contenido">
+    <p class="subtitulos"> Aquí encontrarás una variedad de productos de <strong>Mueblería Hermanos Jota</strong> disponibles para ti. </p>
+    </section>   
+    <section class="centrar-contenido"> 
+        <form method="get" id="formulario">
+            <label for="busqueda"></label>
+            <input type="text" id="busqueda" name="busqueda" placeholder="Nombre del producto" class="busqueda">
+            <button type="submit" class="botones" id="busquedas"> Buscar </button>
+        </form>
+    </section>
     </div>
     
-    <!--<script src=".js"> </script>-->
+    <div id="grilla-productos" class="galeria"></div>
+    
+    <script src="./js/productos.js"> </script>
     </body>
+
+        <footer>
+         <section class="contacto-info">
+            <h2>Contacto y Créditos</h2>
+            <p>Showroom y Taller<br>
+            Hermanos Jota — Casa Taller<br>
+            Av. San Juan 2847<br>
+            C1232AAB — Barrio de San Cristóbal<br>
+            Ciudad Autónoma de Buenos Aires<br>
+            Argentina</p>
+
+            <h3>Horarios:</h3>
+            <p>Lunes a Viernes: 10:00 - 19:00<br>
+            Sábados: 10:00 - 14:00</p>
+
+            <h3>Contacto Digital:</h3>
+            <p>Sitio web: www.hermanosjota.com.ar<br>
+            Email general: info@hermanosjota.com.ar<br>
+            Ventas: ventas@hermanosjota.com.ar<br>
+            Instagram: @hermanosjota_ba<br>
+            WhatsApp: +54 11 4567-8900</p>
+
+            <h3>Créditos del Manual:</h3>
+            <p>Dirección Creativa: Estudio Hermanos<br>
+            Diseño: María Fernanda López<br>
+            Fotografía: Santiago Ciuffo<br>
+            Redacción: Carolina Mendez<br>
+            Tipografía: Inter por Rasmus Andersson<br>
+            © 2025 Hermanos Jota. Todos los derechos reservados.</p>
+        </section>
+    
+    </footer>
 </html>
