@@ -1,33 +1,428 @@
-/* GERNERALES ----------------------------------------------------------------------- */
-*{
+/* GENERALES ----------------------------------------------------------------------- */
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-.centrar-contenido{
+
+p {
+    font-family: "Inter", system-ui, sans-serif;
+}
+
+html{
+    background-color: #F5E6D3;
+}
+
+.titulos{
+    font-family: "Playfair Display", Georgia, serif;
+    text-transform: uppercase;
+    color: #A0522D;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+}
+
+.subtitulos{
+    font-family: "Playfair Display", Georgia, serif;
+    color: #A0522D;
+    letter-spacing: 0.1em;
+    font-weight: 300;
+}
+
+.centrar-contenido {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.texto-principal {
+    font-weight: 400;
+    font-size: 11pt;
+    line-height: 1.6;
+    color: #000;
+}
+
+.botones {
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background-color: #C47A6D;
+    color: #F5E6D3;
+   
+}
+.botones:hover {
+    background-color: #a86255; /* más oscuro al pasar */
+}
+/* MENU ----------------------------------------------------------------------------*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background: #C47A6D;
+    padding: 0 20px;
+}
+
+.logo img {
+    width: 120px;
+    
+}
+
+.carrito {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #F5E6D3;
+    font-weight: bold;
+}
+
+.carrito i{
+    font-size: 30px;
+    color: #F5E6D3;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #F5E6D3;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+nav ul li a.activo,
+nav ul li a:hover {
+    color: #D4A437;
+  
+    transition: .5s;
+}
+
+.checkbtn {
+    font-size: 40px;
+    font-weight: bold;
+    color: #F5E6D3;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+
 /* INDEX ----------------------------------------------------------------------------*/
 
 
 /* DETALLE PRODUCTO -----------------------------------------------------------------*/
-.detalle-producto{
-    width: 100%;
 
+.detalle-producto {
+    width: 100%;
+    margin-top: 120px; 
 }
-.detalle-producto img{
-    width: 30%;
+
+.detalle-producto img {
+    width: 50%;
     max-width: 100%;
     height: auto;
 }
-.bloque{
-    max-width: 70%;
+
+.bloque {
+    max-width: 90%;
+    
 }
-.bloque div{
+
+.bloque div {
     padding: 10px;
 }
-.bloque button{
-    padding: 10px 15px;
+
+.bloque div h1{
+    padding: 0 0 10px;
 }
+
+.bloque button {
+    padding: 10px 15px;
+    border-radius: 13px;
+    border: none;
+    cursor: pointer;
+}
+
+.precio{
+    
+    background-color: #f0ddc5;
+    padding: 5px;
+    border:1px solid #D4A437;
+    border-radius: 17px;
+}
+
+/* RESPONSIVE --------------------------------------------------------------------*/
+
+@media (max-width: 952px) {
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #C47A6D;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        transition: all .5s;
+    }
+    nav ul li {
+        margin: 30px 0;
+    }
+    nav ul li a {
+        font-size: 20px;
+        
+    }
+    nav ul li a:hover,
+    nav ul li a.activo {
+        background: none;
+        letter-spacing: 2px;
+    }
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
+/* ----------------- CONTACTO ----------------- */
+
+main {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+    font-family: "Inter", system-ui, sans-serif;
+    color: #000;
+}
+
+main h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    color: #A0522D; /* Siena Tostado */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+main p {
+    font-size: 11pt;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#form-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #F5E6D3; /* Alabastro Cálido */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#form-contacto label {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+#form-contacto input,
+#form-contacto textarea {
+    padding: 10px 15px;
+    border: 2px solid #C47A6D; /* Rosa Polvoriento */
+    border-radius: 8px;
+    font-family: "Inter", system-ui, sans-serif;
+    font-size: 11pt;
+}
+
+#form-contacto input:focus,
+#form-contacto textarea:focus {
+    outline: none;
+    border-color: #A0522D; /* Siena Tostado */
+}
+
+#form-contacto button {
+    padding: 12px 20px;
+    background-color: #C47A6D; /* Rosa Polvoriento */
+    color: #F5E6D3; /* Alabastro Cálido */
+    font-family: "Inter", system-ui, sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#form-contacto button:hover {
+    background-color: #A86255; /* más oscuro al pasar */
+}
+
+#mensaje-exito {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #87A96B; /* Verde Salvia */
+    text-align: center;
+}
+
+footer .contacto-info {
+    max-width: 900px;
+    margin: 50px auto 20px;
+    padding: 0 20px;
+    font-family: "Inter", system-ui, sans-serif;
+    color: #000;
+    line-height: 1.5;
+}
+
+footer .contacto-info h2,
+footer .contacto-info h3 {
+    color: #A0522D; /* Siena Tostado */
+    margin-bottom: 10px;
+}
+
+footer .contacto-info p {
+    margin-bottom: 15px;
+    font-size: 11pt;
+}
+/* Cele*/
+/* ----------------- HERO ----------------- */
+.hero{
+    background-image: url(../imagenes/Aparador\ Uspallata.png); /*Imagen de fondo del hero*/
+    background-size: cover; /*cubre todo sin deformarse*/
+    background-position: center; /*centrada*/
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px
+}
+.hero-content {
+  background-color: rgba(245, 230, 211, 0.8);/*fondo semitransparente*/
+  padding: 40px;/*espacio interno*/
+  border-radius: 12px; /*bordes redondeados*/
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2); /*sombra*/
+}
+.hero-content h1 {/*estilo del titulo*/
+  font-family: "Playfair Display", Georgia, serif; /*tipografia secundaria*/
+  font-size: 2rem;
+  font-weight: 700; /*negrita*/
+  color: #A0522D; /*Siena Tostado*/
+  margin-bottom: 1rem; /*espacio inferior*/
+  text-transform: uppercase; /*mayusculas*/
+  letter-spacing: 0.05em;
+}
+
+.hero-content p {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 1.2rem;
+  color: #000;
+  margin-bottom: 2rem;
+}
+.cta-button {
+  background-color: #87A96B; /*Verde Salvia*/
+  color: #F5E6D3; /*Alabastro Calido*/
+  padding: 12px 24px;
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #6f8f5a;   /*mas oscuro al pasar*/
+}
+/* ----------------- PRODUCTOS DESTACADOS ----------------- */
+/*-Centrar los textos
+-agregar tipo de letra
+-boton "ver mas" y que salga la descripcion y especificaciones del producto o "añadir al carrito"
+*/
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.tarjeta-individual {
+  width: 280px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.tarjeta-individual:hover {
+  transform: translateY(-5px);
+}
+
+.tarjeta-individual img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.hero-banner {
+    background-color: #F5E6D3; /* Alabastro Cálido */
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero-banner h1 {
+    font-family: 'Playfair Display', serif;
+    color: #A0522D; /* Siena Tostado */
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-banner p {
+    font-family: 'Inter', sans-serif;
+    color: #87A96B; /* Verde Salvia */
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.btn-cta {
+    font-family: 'Inter', sans-serif;
+    background-color: #D4A437; /* Vara de Oro */
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-cta:hover {
+    background-color: #C47A6D; /* Rosa Polvoriento */
+
+}
+  /* cele
