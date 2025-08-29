@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <title>Mueblería Hermanos Jota</title>
 </head>
+
 <body>
-<header>
+    <header>
         <div class="logo">
             <a href="index.html">
                 <img src="./imagenes/logo-principal.svg" alt="Mueblería Hermanos Jota" width="300" height="200">
@@ -19,7 +21,7 @@
             <!-- Botón menú hamburguesa -->
             <input type="checkbox" id="check">
             <label for="check" class="checkbtn">
-                <i class="bi bi-list"></i>
+                <i class="bi bi-list"></i> <!--sale de bootstrap-->
             </label>
 
             <ul>
@@ -30,86 +32,61 @@
         </nav>
 
         <div class="carrito">
-            <i class="bi bi-cart-fill"></i>
+            <i class="bi bi-cart-fill"></i><!--sale de bootstrap-->
             <span id="contador-carrito">0</span>
         </div>
     </header>
     <main>
-        <section> Seccion principal</section> 
-        <section> <!-- Seccion productos destacados--
-            <h2> </h2>
-            <h3>Escritorio Costa</h3>
-            <img src="C:\Users\Laptop\Documents\GitHub\Hermanos-Jota\imagenes\Escritorio Costa.png" alt="" width="60" height="60">
-            <p>Escritorio compacto con cajón organizado y tapa pasacables integrada en bambú laminado. Ideal para espacios de trabajo en casa,
-                combina funcionalidad moderna con estética minimalista y sostenible, perfecto para el trabajo remoto</p>
-            <table>
-                <tbody>
-                    <tr> 
-                        <td>MEDIDAS</td>
-                        <td>120 x 60 x 75cm</td> 
-                    </tr>
-                    <tr>
-                        <td>MATERIALES</td>
-                        <td>Bambú laminado,herrajes ocultos</td>
-                    </tr>
-                </tbody>
-            </table>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Honramos la tradición mientras innovamos</h1>
+                <p>Muebles que cuentan historias, hechos con materiales nobles y manos expertas.</p>
+                <a href="productos.html" class="cta-button">Ver catálogo</a>
+            </div>
+        </section>
 
-            <h3>Mesa de Centro Araucaria</h3>
-            <img src="C:\Users\Laptop\Documents\GitHub\Hermanos-Jota\imagenes\Mesa de Centro Araucaria.png" alt="" width="60" height="60">
-            <p>Mesa de centro con sobre circular de mármol Patagonia y base de tres patas en madera de nogal. Su diseño minimalista se convierte
-                en el punto focal perfecto para cualquier sala de estar contemporánea, combinando la frialdad del mármol con la calidez de la madera.</p>
-            <table>
-                <tbody>
-                    <tr> 
-                        <td>MEDIDAS</td>
-                        <td>90 x 90 x 45cm</td> 
-                    </tr>
-                    <tr>
-                        <td>MATERIALES</td>
-                        <td>Sobre de mármol Patagonia, patas de nogal</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <h3>Silla de Trabajo Belgrano</h3>
-            <img src="C:\Users\Laptop\Documents\GitHub\Hermanos-Jota\imagenes\Silla de Trabajo Belgrano.png" alt="" width="60" height="60">
-            <p>Silla ergonómica regulable en altura con respaldo de malla transpirable y asiento tapizado en tejido reciclado.
-                Diseñada para largas jornadas de trabajo con máximo confort y apoyo lumbar, ideal para oficinas en casa y espacios de coworking.</p>
-            <table>
-                <tbody>
-                    <tr> 
-                        <td>MEDIDAS</td>
-                        <td>60 x 60 x 90-100cm</td> 
-                    </tr>
-                    <tr>
-                        <td>MATERIALES</td>
-                        <td>Malla técnica, tejido reciclado</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <h3>Sillón Copacabana</h3>
-            <img src="C:\Users\Laptop\Documents\GitHub\Hermanos-Jota\imagenes\Sillón Copacabana.png" alt="" width="60" height="60">
-            <p>Sillón lounge en cuero cognac con base giratoria en acero Burnt Sienna. Inspirado en la estética brasilera moderna de los 60, 
-                combina comodidad excepcional con un diseño icónico que trasciende tendencias y épocas.</p>
-            <table>
-                <tbody>
-                    <tr> 
-                        <td>MEDIDAS</td>
-                        <td>90 x 85 x 95 cm</td> 
-                    </tr>
-                    <tr>
-                        <td>MATERIALES</td>
-                        <td>Cuero curtido vegetal, acero pintado</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>-->
-
-        <section>  
-            <h2> Seccion productos destacados </h2>
-            <table>
+        <section>
+            <h2> Sección productos destacados </h2>
+            <div class="galeria">
+                <div class="tarjeta-individual">
+                    <img src="./imagenes/Escritorio Costa.png" alt="Escritorio Costa" width="200" height="200">
+                    <h3>Escritorio Costa</h3>
+                    <p>Escritorio compacto con cajón organizado y tapa pasacables integrada en bambú laminado. Ideal
+                        para espacios de trabajo en casa,
+                        combina funcionalidad moderna con estética minimalista y sostenible, perfecto para el trabajo
+                        remoto.</p>
+                    <p>Medidas: 120x60x75cm <br> Materiales: Bambu laminado, herrajes ocultos</p>
+                </div>
+                <div class="tarjeta-individual">
+                    <img src="./imagenes/Mesa de Centro Araucaria.png" alt="Mesa de Centro Araucaria" width="200"
+                        height="200">
+                    <h3>Mesa de Centro Araucaria</h3>
+                    <p>Mesa de centro con sobre circular de mármol Patagonia y base de tres patas en madera de nogal. Su
+                        diseño minimalista se convierte
+                        en el punto focal perfecto para cualquier sala de estar contemporánea, combinando la frialdad
+                        del mármol con la calidez de la madera.</p>
+                    <p>Medidas: 90x90x45cm <br> Materiales: Sobre de mármol Patagonia, patas de nogal</p>
+                </div>
+                <div class="tarjeta-individual">
+                    <img src="./imagenes/Silla de Trabajo Belgrano.png" alt="Silla de Trabajo Belgrano" width="200"
+                        height="200">
+                    <h3>Silla de Trabajo Belgrano</h3>
+                    <p>Silla ergonómica regulable en altura con respaldo de malla transpirable y asiento tapizado en
+                        tejido reciclado.
+                        Diseñada para largas jornadas de trabajo con máximo confort y apoyo lumbar, ideal para oficinas
+                        en casa y espacios de coworking.</p>
+                    <p>Medidas: 69x60x90-100cm <br> Materiales: Malla técnica, tejido reciclado</p>
+                </div>
+                <div class="tarjeta-individual">
+                    <img src="./imagenes/Sillón Copacabana.png" alt="Sillón Copacabana" width="200" height="200">
+                    <h3>Sillón Copacabana</h3>
+                    <p>Sillón lounge en cuero cognac con base giratoria en acero Burnt Sienna. Inspirado en la estética
+                        brasilera moderna de los 60,
+                        combina comodidad excepcional con un diseño icónico que trasciende tendencias y épocas.</p>
+                    <p>Medidas: 90x85x95cm <br> Materiales: Cuero curtido vegetal, acero pintado</p>
+                </div>
+            </div>
+            <!-- <table>
                 <tbody>
                     <tr> 
                         <td>Escritorio Costa</td>
@@ -118,13 +95,13 @@
                         <td>Sillón Copacabana</td>
                     </tr>
                     <tr>
-                        <td><img src="../Hermanos-Jota/imagenes/Escritorio Costa.png" 
+                        <td><img src="../imagenes/Escritorio Costa.png" 
                             alt="" width="60" height="60"></td>
-                        <td><img src="../Hermanos-Jota/imagenes/Mesa de Centro Araucaria.png"
+                        <td><img src="../imagenes/Mesa de Centro Araucaria.png"
                             alt="" width="60" height="60"></td>
-                        <td><img src="../Hermanos-Jota/imagenes/Silla de Trabajo Belgrano.png"
+                        <td><img src="../imagenes/Silla de Trabajo Belgrano.png"
                             alt="" width="60" height="60"></td>
-                        <td><img src="../Hermanos-Jota/imagenes/Sillón Copacabana.png"
+                        <td><img src="../imagenes/Sillón Copacabana.png"
                             alt="" width="60" height="60"></td>
                     </tr> 
                         <td>Escritorio compacto con cajón organizado y tapa pasacables integrada en bambú laminado. Ideal para espacios de trabajo en casa, 
@@ -144,21 +121,27 @@
 
                     </tr>
                 </tbody>
-            </table>
+            </table>-->
         </section>
 
-        
+
 
     </main>
     <footer> <!-- info basica-->
         <h4>Informacion de contacto</h4>
         <ul>
-            <li>Mail general: <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=GTvVlcSDZBcZRfBthwXxGvhJmbLhDHHbwngjXcSjwgHvVhpfmFfpjQDLmsKmqQjKjVVcQldQMCklZ">info@hermanosjota.com.ar</a></li>
-            <li>Ventas: <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJqXPMxLhwPsckLFpRBcvHnsdJvdmRZjWnVZNPZBVpZKWBdGFhHtNfkkhgFhmVLKVXhHhrg">ventas@hermanosjota.com.ar </a></li>
+            <li>Mail general: <a
+                    href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=GTvVlcSDZBcZRfBthwXxGvhJmbLhDHHbwngjXcSjwgHvVhpfmFfpjQDLmsKmqQjKjVVcQldQMCklZ">info@hermanosjota.com.ar</a>
+            </li>
+            <li>Ventas: <a
+                    href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJqXPMxLhwPsckLFpRBcvHnsdJvdmRZjWnVZNPZBVpZKWBdGFhHtNfkkhgFhmVLKVXhHhrg">ventas@hermanosjota.com.ar
+                </a></li>
             <li>Direccion: <a href="https://maps.app.goo.gl/9mMXbFAAQ8JrcNNP6">Av San Juan 2847</a></li>
             <li>Whatsapp: <a href="https://wa.me/541145678900">+54 11 4567-89000</a></li>
-            <li>Instagram: <a href="https://alt-5a31a0302d72d.blackboard.com/bbcswebdav/pid-982156-dt-content-rid-14612411_1/courses/FSD.00-43441/Instagram%20copy/index.html?one_hash=A78DA28B502F8714C85F5ADFDFB8B128&f_hash=FF0E4BA7D1D74AA543D5809F6A5C45C7"> 
-                <img src="C:\Users\Laptop\Desktop\2025\Itba\descarga (1).jpeg" alt="" width="10" height="10"></a></li>
+            <li>Instagram: <a
+                    href="https://alt-5a31a0302d72d.blackboard.com/bbcswebdav/pid-982156-dt-content-rid-14612411_1/courses/FSD.00-43441/Instagram%20copy/index.html?one_hash=A78DA28B502F8714C85F5ADFDFB8B128&f_hash=FF0E4BA7D1D74AA543D5809F6A5C45C7">
+                    <img src="C:\Users\Laptop\Desktop\2025\Itba\descarga (1).jpeg" alt="" width="10" height="10"></a>
+            </li>
 
         </ul>
         <h4> Acerca de </h4>
@@ -169,10 +152,11 @@
             <li> <strong>Redacción:</strong> Carolina Mendez</li>
             <li> <strong>Tipografía:</strong> Inter por Rasmus Andersson</li>
         </ul>
-        <hr> 
-            <p>&copy; <strong>2025 Hermanos Jota.</strong> Todos los derechos reservados.
+        <hr>
+        <p>&copy; <strong>2025 Hermanos Jota.</strong> Todos los derechos reservados.
             <br> Este manual es propiedad de Hermanos Jota Muebles
-            </p>
+        </p>
     </footer>
 </body>
+
 </html>
