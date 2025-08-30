@@ -306,7 +306,7 @@ footer .contacto-info p {
     margin-bottom: 15px;
     font-size: 11pt;
 }
-/* Cele*/
+
 /* ----------------- HERO ----------------- */
 .hero{
     background-image: url(../imagenes/Aparador\ Uspallata.png); /*Imagen de fondo del hero*/
@@ -360,10 +360,7 @@ footer .contacto-info p {
   background-color: #6f8f5a;   /*mas oscuro al pasar*/
 }
 /* ----------------- PRODUCTOS DESTACADOS ----------------- */
-/*-Centrar los textos
--agregar tipo de letra
--boton "ver mas" y que salga la descripcion y especificaciones del producto o "añadir al carrito"
-*/
+
 .galeria {
   display: flex;
   flex-wrap: wrap;
@@ -440,13 +437,7 @@ footer .contacto-info p {
 
 }
 
-
-
-
-  /* cele
-
-
-  -boton "ver mas" y que salga la descripcion y especificaciones del producto o "añadir al carrito"
+/*  -boton "ver mas" y que salga la descripcion y especificaciones del producto o "añadir al carrito"
 */
 .cont-extra{
     margin-top:1rem;

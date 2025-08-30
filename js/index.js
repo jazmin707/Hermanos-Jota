@@ -38,3 +38,17 @@ document.querySelectorAll('.boton-vermas').forEach(boton => {
         }
     })
 })
+
+// contador de "añadir al carrito"
+let contadorCarrito=0;
+
+document.addEventListener("DOMContentLoaded", () => {
+    const botonesAgregar = document.querySelectorAll(".añadir-carrito");
+    
+    botonesAgregar.forEach(boton => {
+        boton.addEventListener("click", () => {
+            contadorCarrito++;
+            document.getElementById("contador-carrito").textContent= contadorCarrito;
+        })
+    })
+})
