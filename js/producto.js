@@ -52,5 +52,59 @@ const catalogoProducto=[
         acabado:"Barniz mate de poliuretano",
         almacenamiento: "1 cajón + repisa inferior",
         caracteristicas:"Cajón con cierre suave"
+    },
+    {
+        nombre: "Cama Neuquen",
+        descripcion: "Cama plataforma con cabecero flotante tapizado en lino natural y estructura de madera maciza. Su diseño minimalista y sofisticado crea un ambiente de serenidad y elegancia, perfecto para dormitorios contemporáneos que buscan paz y simplicidad.",
+        medidas: "160 x 200 x 90 cm",
+        materiales: "Roble macizo FSC®, tapizado lino",
+        acabado: "Aceite natural, tapizado premium",
+        colchón: "Compatible con colchón 160x200",
+        caracteristicas: "Cabecero flotante acolchado"
+    },
+    {
+        nombre: "Sofá Patagonia",
+        descripcion: "Sofá de tres cuerpos tapizado en lino Warm Alabaster con patas cónicas de madera. Los cojines combinan espuma de alta resiliencia con plumón reciclado, ofreciendo comodidad duradera y sostenible para el hogar moderno.",
+        medidas: "220 x 90 x 80 cm",
+        materiales: "Madera de eucalipto certificada FSC®, lino 100% natural premium",
+        acabado: "Cera vegetal",
+        relleno: "Espuma HR + plumón reciclado",
+        sostenibilidad: "Materiales 100% reciclables"
+    },
+    {
+        nombre: "Mesa Comedor Pampa",
+        descripcion: "Mesa extensible de roble macizo con tablero biselado y sistema de apertura suave. Su diseño robusto y elegante se adapta perfectamente a reuniones íntimas o grandes celebraciones familiares, extendiéndose de 6 a 10 comensales.",
+        medidas: "160-240 x 90 x 75 cm",
+        materiales: "Roble macizo FSC®, mecanismo alemán",
+        acabado: "Aceite-cera natural",
+        capacidad: "6-10 comensales",
+        extension: "Sistema de mariposa central"
+    },
+    {
+        nombre: "Sillas Córdoba",
+        descripcion: "Set de cuatro sillas apilables en contrachapado moldeado de nogal y estructura tubular pintada en Sage Green. Su diseño ergonómico y materiales de calidad garantizan comodidad y durabilidad en el uso diario, perfectas para comedores contemporáneos.",
+        medidas: "45 x 52 x 80 cm (cada una)",
+        materiales: "Contrachapado nogal, tubo de acero",
+        acabado: "Laca mate, pintura epoxi",
+        apilables: "Hasta 6 sillas",
+        incluye: "Set de 4 sillas"
+    },
+    {
+        nombre: "Escritorio Costa",
+        descripcion: "Escritorio compacto con cajón organizado y tapa pasacables integrada en bambú laminado. Ideal para espacios de trabajo en casa, combina funcionalidad moderna con estética minimalista y sostenible, perfecto para el trabajo remoto.",
+        medidas: "120 x 60 x 75 cm",
+        materiales: "Bambú laminado, herrajes ocultos",
+        acabado: "Laca mate resistente",
+        almacenamiento: "1 cajón con organizador",
+        cables: "Pasacables integrado"
+    },
+    {
+        nombre: "Silla de Trabajo Belgrano",
+        descripcion: "Silla ergonómica regulable en altura con respaldo de malla transpirable y asiento tapizado en tejido reciclado. Diseñada para largas jornadas de trabajo con máximo confort y apoyo lumbar, ideal para oficinas en casa y espacios de coworking.",
+        medidas: "60 x 60 x 90-100 cm",
+        materiales: "Malla técnica, tejido reciclado",
+        acabado: "Base cromada, tapizado premium",
+        regulacion: "Altura + inclinación respaldo",
+        certificacion: "Ergonomía europea EN 1335"
     }
 ];
