@@ -306,6 +306,90 @@ footer .contacto-info p {
     margin-bottom: 15px;
     font-size: 11pt;
 }
+/* Cele*/
+/* ----------------- HERO ----------------- */
+.hero{
+    background-image: url(../imagenes/Aparador\ Uspallata.png); /*Imagen de fondo del hero*/
+    background-size: cover; /*cubre todo sin deformarse*/
+    background-position: center; /*centrada*/
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px
+}
+.hero-content {
+  background-color: rgba(245, 230, 211, 0.8);/*fondo semitransparente*/
+  padding: 40px;/*espacio interno*/
+  border-radius: 12px; /*bordes redondeados*/
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2); /*sombra*/
+}
+.hero-content h1 {/*estilo del titulo*/
+  font-family: "Playfair Display", Georgia, serif; /*tipografia secundaria*/
+  font-size: 2rem;
+  font-weight: 700; /*negrita*/
+  color: #A0522D; /*Siena Tostado*/
+  margin-bottom: 1rem; /*espacio inferior*/
+  text-transform: uppercase; /*mayusculas*/
+  letter-spacing: 0.05em;
+}
+
+.hero-content p {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 1.2rem;
+  color: #000;
+  margin-bottom: 2rem;
+}
+.cta-button {
+  background-color: #87A96B; /*Verde Salvia*/
+  color: #F5E6D3; /*Alabastro Calido*/
+  padding: 12px 24px;
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #6f8f5a;   /*mas oscuro al pasar*/
+}
+/* ----------------- PRODUCTOS DESTACADOS ----------------- */
+/*-Centrar los textos
+-agregar tipo de letra
+-boton "ver mas" y que salga la descripcion y especificaciones del producto o "añadir al carrito"
+*/
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.tarjeta-individual {
+  width: 280px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.tarjeta-individual:hover {
+  transform: translateY(-5px);
+}
+
+.tarjeta-individual img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+=======
 .hero-banner {
     background-color: #F5E6D3; /* Alabastro Cálido */
     text-align: center;
@@ -339,4 +423,6 @@ footer .contacto-info p {
 
 .btn-cta:hover {
     background-color: #C47A6D; /* Rosa Polvoriento */
+
 }
+  /* cele
