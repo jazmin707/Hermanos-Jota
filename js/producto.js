@@ -9,6 +9,7 @@ const catalogoProducto = [
         peso: "68 kg",
         capacidad: "6 compartimentos interiores",
         precio: 700,
+        imagen:"./imagenes/Aparador Uspallata.png",
         destacado: true
     },
     {
@@ -20,6 +21,7 @@ const catalogoProducto = [
         peso: "45 kg por estante",
         capacidad: "5 estantes ajustables",
         precio: 700,
+        imagen:"./imagenes/Aparador Uspallata.png",
         destacado: false
     },
     {
@@ -31,6 +33,7 @@ const catalogoProducto = [
         tapizado: "Repelente al agua y manchas",
         confort: "Espuma alta densidad",
         precio: 700,
+        imagen:"./imagenes/Aparador Uspallata.png",
         destacado: true
     },
     {
@@ -41,6 +44,7 @@ const catalogoProducto = [
         rotacion: "360° silenciosa y suave",
         garantia: "10 años en estructura",
         precio: 700,
+        imagen:"./imagenes/Aparador Uspallata.png",
         destacado: true
     },
     {
@@ -52,6 +56,7 @@ const catalogoProducto = [
         peso: "42 kg",
         cargaMax: "25 kg distribuidos",
         precio: 700,
+        imagen:"./imagenes/Aparador Uspallata.png",
         destacado: true
     },
     {
@@ -63,6 +68,7 @@ const catalogoProducto = [
         almacenamiento: "1 cajón + repisa inferior",
         caracteristicas: "Cajón con cierre suave",
         precio: 700,
+        imagen:"./imagenes/Aparador Uspallata.png",
         destacado: false
     },
     {
@@ -74,6 +80,7 @@ const catalogoProducto = [
         colchón: "Compatible con colchón 160x200",
         caracteristicas: "Cabecero flotante acolchado",
         precio: 700,
+        imagen:"./imagenes/Aparador Uspallata.png",
         destacado: true
     },
     {
@@ -84,6 +91,7 @@ const catalogoProducto = [
         relleno: "Espuma HR + plumón reciclado",
         sostenibilidad: "Materiales 100% reciclables",
         precio: 700,
+        imagen:"./imagenes/Aparador Uspallata.png",
         destacado: false
     },
     {
@@ -95,6 +103,7 @@ const catalogoProducto = [
         capacidad: "6-10 comensales",
         extension: "Sistema de mariposa central",
         precio: 700,
+        imagen:"./imagenes/Aparador Uspallata.png",
         destacado: false
     },
     {
@@ -106,6 +115,7 @@ const catalogoProducto = [
         apilables: "Hasta 6 sillas",
         incluye: "Set de 4 sillas",
         precio: 700,
+        imagen:"./imagenes/Aparador Uspallata.png",
         destacado: false
     },
     {
@@ -117,6 +127,7 @@ const catalogoProducto = [
         almacenamiento: "1 cajón con organizador",
         cables: "Pasacables integrado",
         precio: 700,
+        imagen:"./imagenes/Aparador Uspallata.png",
         destacado: false
     },
     {
@@ -128,6 +139,7 @@ const catalogoProducto = [
         regulacion: "Altura + inclinación respaldo",
         certificacion: "Ergonomía europea EN 1335",
         precio: 700,
+        imagen:"./imagenes/Aparador Uspallata.png",
         destacado: false
     }
 ];
@@ -141,11 +153,16 @@ descripcion.textContent = catalogoProducto[0].descripcion;
 const precio = document.querySelector('#precio');
 precio.textContent = '$' + catalogoProducto[0].precio;
 
+const imagen = document.querySelector('#imagenProducto');
+imagen.src = catalogoProducto[0].imagen;
+imagen.alt = catalogoProducto[0].nombre;
+
 const detalles = document.querySelector('#detalles');
 detalles.textContent = ""; // limpia la variable
 
+
 for (let clave in catalogoProducto[0]) {
-    if (clave !== "nombre" && clave !== "descripcion" && clave !== "precio" && clave !== "destacado") {
+    if (clave !== "nombre" && clave !== "descripcion" && clave !== "precio" && clave !== "destacado" && clave !== "imagen") {
 
         const p = document.createElement("p");
         p.style.lineHeight='1.6';
@@ -161,3 +178,27 @@ for (let clave in catalogoProducto[0]) {
         detalles.appendChild(p);
     }
 }
+ // funcionalidad para agregar y sacar cosas del carrito
+const botonAgregar = document.querySelector(".botones");
+const contadorCarrito = document.querySelector("#contador-carrito");
+
+let enCarrito = false; // Estado del producto
+
+botonAgregar.addEventListener("click", () => {
+    let contadorActual = parseInt(contadorCarrito.textContent);
+
+    if (!enCarrito) {
+        // Agrega al carrito
+        contadorActual++;
+        botonAgregar.textContent = "Eliminar";
+        enCarrito = true;
+    } else {
+        // Saca del carrito
+        if (contadorActual > 0) contadorActual--;
+        botonAgregar.textContent = "Agregar";
+        enCarrito = false;
+    }
+
+    contadorCarrito.textContent = contadorActual;
+});
+
