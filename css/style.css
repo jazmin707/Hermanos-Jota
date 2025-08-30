@@ -306,6 +306,7 @@ footer .contacto-info p {
     margin-bottom: 15px;
     font-size: 11pt;
 }
+/* Cele*/
 /* ----------------- HERO ----------------- */
 .hero{
     background-image: url(../imagenes/Aparador\ Uspallata.png); /*Imagen de fondo del hero*/
@@ -388,4 +389,40 @@ footer .contacto-info p {
   width: 100%;
   height: 200px;
   object-fit: cover;
+=======
+.hero-banner {
+    background-color: #F5E6D3; /* Alabastro Cálido */
+    text-align: center;
+    padding: 80px 20px;
 }
+
+.hero-banner h1 {
+    font-family: 'Playfair Display', serif;
+    color: #A0522D; /* Siena Tostado */
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-banner p {
+    font-family: 'Inter', sans-serif;
+    color: #87A96B; /* Verde Salvia */
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.btn-cta {
+    font-family: 'Inter', sans-serif;
+    background-color: #D4A437; /* Vara de Oro */
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-cta:hover {
+    background-color: #C47A6D; /* Rosa Polvoriento */
+
+}
+  /* cele
