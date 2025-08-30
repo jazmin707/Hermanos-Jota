@@ -23,3 +23,18 @@ function renderDestacados() {
 
 // Ejecutar cuando la página termine de cargar
 document.addEventListener("DOMContentLoaded", renderDestacados);
+    
+//-boton "ver mas" y que salga la descripcion y especificaciones del producto o "añadir al carrito"
+document.querySelectorAll('.boton-vermas').forEach(boton => {
+    boton.addEventListener('click', () => {
+        const contenidoExtra = boton.nextElementSibling;
+        contenidoExtra.classList.toggle('oculto');
+
+        //cambiar el texto del boton
+        if(contenidoExtra.classList.contains('oculto')){
+            boton.textContent='Ver más';
+        }else{
+            boton.textContent='Ver menos'
+        }
+    })
+})

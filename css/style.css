@@ -379,6 +379,20 @@ footer .contacto-info p {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   padding: 1rem;
   transition: transform 0.3s ease;
+  text-align: center; /*-Centrar los textos*/
+
+}
+
+/*-agregar tipo de letra*/
+.tarjeta-individual h3{
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    color: #A0522D;
+}
+.tarjeta-individual p{
+    font-family: "Inter", sans-serif;
+    font-size: 11pt;
+    color:#333;
 }
 
 .tarjeta-individual:hover {
@@ -425,4 +439,41 @@ footer .contacto-info p {
     background-color: #C47A6D; /* Rosa Polvoriento */
 
 }
+
+
+
+
   /* cele
+
+
+  -boton "ver mas" y que salga la descripcion y especificaciones del producto o "añadir al carrito"
+*/
+.cont-extra{
+    margin-top:1rem;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.oculto{
+    display: none;
+}
+.boton-vermas,
+.añadir-carrito{
+    margin-top: 1rem;
+    padding: 10px 20px;
+    background-color: #C47A6D;
+    color:#F5E6D3;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: background-color 0.3s;
+}
+
+.boton-vermas,
+.añadir-carrito{
+    background-color: #A86255;
+}
