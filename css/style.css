@@ -165,6 +165,15 @@ nav ul li a:hover {
     border-radius: 17px;
 }
 
+.detalles{
+    margin: 10px 0 10px 0;
+    font-size: 11pt;
+}
+
+.clave{
+    color: #C47A6D;
+    text-transform: capitalize;
+}
 /* RESPONSIVE --------------------------------------------------------------------*/
 
 @media (max-width: 952px) {
