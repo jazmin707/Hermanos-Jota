@@ -169,7 +169,7 @@ formulario.addEventListener("submit", (e) => {
         const tarjeta = document.createElement("div");
         tarjeta.classList.add("tarjeta");
         const enlace = document.createElement("a");
-        enlace.href = `detalle.html?producto=${index}`;
+        enlace.href = `producto.html?producto=${index}`;
         const titulo = document.createElement("h3");
         titulo.textContent = mueble.nombre;
         titulo.classList.add("subtitulos");

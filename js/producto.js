@@ -143,46 +143,60 @@ const catalogoProducto = [
         destacado: false
     }
 ];
-// agregar la info de los objetos en cada etiqueta de detalle producto
-const titulo = document.querySelector('#nombreProducto');
-titulo.textContent = catalogoProducto[0].nombre;
 
-const descripcion = document.querySelector('#descripcion');
-descripcion.textContent = catalogoProducto[0].descripcion;
+// Obtiene el parámetro 'producto' de la URL
+const params = new URLSearchParams(window.location.search);
+const productoId = parseInt(params.get('producto'));
 
-const precio = document.querySelector('#precio');
-precio.textContent = '$' + catalogoProducto[0].precio;
+// Verifica si el ID es válido
+if (!isNaN(productoId) && productoId >= 0 && productoId < catalogoProducto.length) {
+    const producto = catalogoProducto[productoId];
 
-const imagen = document.querySelector('#imagenProducto');
-imagen.src = catalogoProducto[0].imagen;
-imagen.alt = catalogoProducto[0].nombre;
+    const titulo = document.querySelector('#nombreProducto');
+    titulo.textContent = producto.nombre;
 
-const detalles = document.querySelector('#detalles');
-detalles.textContent = ""; // limpia la variable
+    const descripcion = document.querySelector('#descripcion');
+    descripcion.textContent = producto.descripcion;
 
+    const precio = document.querySelector('#precio');
+    precio.textContent = '$' + producto.precio;
 
-for (let clave in catalogoProducto[0]) {
-    if (clave !== "nombre" && clave !== "descripcion" && clave !== "precio" && clave !== "destacado" && clave !== "imagen") {
+    const imagen = document.querySelector('#imagenProducto');
+    imagen.src = producto.imagen;
+    imagen.alt = producto.nombre;
 
-        const p = document.createElement("p");
-        p.style.lineHeight='1.6';
+    const detalles = document.querySelector('#detalles');
+    detalles.textContent = ""; // Limpia lo que hay dentro
 
-        const spanClave = document.createElement("span");
-        spanClave.classList.add("clave");
+    for (let clave in producto) {
+        if (clave !== "nombre" && clave !== "descripcion" && clave !== "precio" && clave !== "destacado" && clave !== "imagen") {
+            const p = document.createElement("p");
+            p.style.lineHeight = '1.6';
 
-        spanClave.textContent = clave + ":";
+            const spanClave = document.createElement("span");
+            spanClave.classList.add("clave");
+            spanClave.textContent = clave + ":";
 
-        p.appendChild(spanClave); 
-        p.append(" " + catalogoProducto[0][clave]); 
+            p.appendChild(spanClave);
+            p.append(" " + producto[clave]);
 
-        detalles.appendChild(p);
+            detalles.appendChild(p);
+        }
     }
+} else {
+
+    console.error('Producto no encontrado');
+    if (window.location.pathname !== '/index.html') {
+    window.location.href = 'index.html';  // Redirige a la página de inicio
 }
+}
+
  // funcionalidad para agregar y sacar cosas del carrito
 const botonAgregar = document.querySelector(".botones");
 const contadorCarrito = document.querySelector("#contador-carrito");
 
 let enCarrito = false; // Estado del producto
+
 
 botonAgregar.addEventListener("click", () => {
     let contadorActual = parseInt(contadorCarrito.textContent);
