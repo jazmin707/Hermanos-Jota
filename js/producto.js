@@ -191,28 +191,20 @@ if (!isNaN(productoId) && productoId >= 0 && productoId < catalogoProducto.lengt
 }
 }
 
- // funcionalidad para agregar y sacar cosas del carrito
-const botonAgregar = document.querySelector(".botones");
+const btnAgregar = document.querySelector("#botonAgregar");
+const btnEliminar = document.querySelector("#botonEliminar");
 const contadorCarrito = document.querySelector("#contador-carrito");
 
-let enCarrito = false; // Estado del producto
+let cantidad = 0; // cantidad del producto
 
-
-botonAgregar.addEventListener("click", () => {
-    let contadorActual = parseInt(contadorCarrito.textContent);
-
-    if (!enCarrito) {
-        // Agrega al carrito
-        contadorActual++;
-        botonAgregar.textContent = "Eliminar";
-        enCarrito = true;
-    } else {
-        // Saca del carrito
-        if (contadorActual > 0) contadorActual--;
-        botonAgregar.textContent = "Agregar";
-        enCarrito = false;
-    }
-
-    contadorCarrito.textContent = contadorActual;
+btnAgregar.addEventListener("click", () => {
+    cantidad++;
+    contadorCarrito.textContent = cantidad;
 });
 
+btnEliminar.addEventListener("click", () => {
+    if (cantidad > 0) {
+        cantidad--;
+        contadorCarrito.textContent = cantidad;
+    }
+});
