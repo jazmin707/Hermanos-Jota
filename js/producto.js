@@ -191,20 +191,26 @@ if (!isNaN(productoId) && productoId >= 0 && productoId < catalogoProducto.lengt
 }
 }
 
-const btnAgregar = document.querySelector("#botonAgregar");
-const btnEliminar = document.querySelector("#botonEliminar");
-const contadorCarrito = document.querySelector("#contador-carrito");
+const btnToggle = document.querySelector("#botonToggle");
 
-let cantidad = 0; // cantidad del producto
-
-btnAgregar.addEventListener("click", () => {
-    cantidad++;
-    contadorCarrito.textContent = cantidad;
-});
-
-btnEliminar.addEventListener("click", () => {
-    if (cantidad > 0) {
-        cantidad--;
-        contadorCarrito.textContent = cantidad;
+function actualizarBoton(id) {
+    if (estaEnCarrito(id)) {
+        btnToggle.textContent = "Eliminar";
+    } else {
+        btnToggle.textContent = "Guardar";
     }
+}
+
+btnToggle.addEventListener("click", () => {
+    if (estaEnCarrito(productoId)) {
+        eliminarProducto(productoId);
+    } else {
+        agregarProducto(productoId);
+    }
+    actualizarBoton(productoId);
 });
+
+// Inicializar
+actualizarBoton(productoId);
+
+
