@@ -195,9 +195,9 @@ const btnToggle = document.querySelector("#botonToggle");
 
 function actualizarBoton(id) {
     if (estaEnCarrito(id)) {
-        btnToggle.textContent = "Eliminar";
+        btnToggle.textContent = "Eliminar del carrito";
     } else {
-        btnToggle.textContent = "Guardar";
+        btnToggle.textContent = "Agregar al carrito";
     }
 }
 
