@@ -10,6 +10,7 @@ const catalogoProducto = [
         capacidad:"6 compartimentos interiores",
         destacado: true,
         imagen: "./imagenes/Aparador Uspallata.png",
+        precio: 600000,
     },
     {
         nombre: "Biblioteca Recoleta",
@@ -21,6 +22,7 @@ const catalogoProducto = [
         capacidad:"5 estantes ajustables",
         destacado: false,
         imagen: "./imagenes/Biblioteca Recoleta.png",
+        precio: 800000,
     },
     {
         nombre: "Butaca Mendoza",
@@ -32,6 +34,7 @@ const catalogoProducto = [
         confort:"Espuma alta densidad",
         destacado: true,
         imagen: "./imagenes/Butaca Mendoza.png",
+        precio:50000,
     },
     {
         nombre: "Sillón Copacabana",
@@ -42,6 +45,7 @@ const catalogoProducto = [
         garantia:"10 años en estructura",
         destacado: true,
         imagen: "./imagenes/Sillón Copacabana.png",
+        precio: 720000,
     },
     {
         nombre: "Mesa de Centro Araucaria",
@@ -53,6 +57,7 @@ const catalogoProducto = [
         cargaMax:"25 kg distribuidos",
         destacado: true,
         imagen: "./imagenes/Mesa de Centro Araucaria.png",
+        precio:450000,
     },
     {
         nombre: "Mesa de Noche Aconcagua",
@@ -64,6 +69,7 @@ const catalogoProducto = [
         caracteristicas:"Cajón con cierre suave",
         destacado: false,
         imagen: "./imagenes/Mesa de Noche Aconcagua.png",
+        precio:350000,
     },
     {
         nombre: "Cama Neuquén",
@@ -75,6 +81,7 @@ const catalogoProducto = [
         caracteristicas:"Cabecero flotante acolchado",
         destacado: true,
         imagen: "./imagenes/Cama Neuquén.png",
+        precio:1500000,
     },
     {
         nombre: "Sofá Patagonia",
@@ -85,6 +92,7 @@ const catalogoProducto = [
         sostenibilidad:"Materiales 100% reciclables",
         destacado: false,
         imagen: "./imagenes/Sofá Patagonia.png",
+        precio:1100000,
     },
     {
         nombre: "Mesa Comedor Pampa",
@@ -96,6 +104,7 @@ const catalogoProducto = [
         extension:"Sistema de mariposa central",
         destacado: false,
         imagen: "./imagenes/Mesa Comedor Pampa.png",
+        precio:990000
     },
     {
         nombre: "Sillas Córdoba",
@@ -107,6 +116,7 @@ const catalogoProducto = [
         incluye:"Set de 4 sillas",
         destacado: false,
         imagen: "./imagenes/Sillas Córdoba.png",
+        precio: 450000,
     },
     {
         nombre: "Escritorio Costa",
@@ -118,6 +128,7 @@ const catalogoProducto = [
         cables:"Pasacables integrado",
         destacado: false,
         imagen: "./imagenes/Escritorio Costa.png",
+        precio:640000,
     },
     {
         nombre: "Silla de Trabajo Belgrano",
@@ -129,6 +140,7 @@ const catalogoProducto = [
         certificacion:"Ergonomía europea EN 1335",
         destacado: false,
         imagen: "./imagenes/Silla de Trabajo Belgrano.png",
+        precio:400000
     }
 ];
 
