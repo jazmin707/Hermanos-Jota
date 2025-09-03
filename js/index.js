@@ -25,30 +25,33 @@ function renderDestacados() {
 document.addEventListener("DOMContentLoaded", renderDestacados);
     
 //-boton "ver mas" y que salga la descripcion y especificaciones del producto o "añadir al carrito"
-document.querySelectorAll('.boton-vermas').forEach(boton => {
-    boton.addEventListener('click', () => {
-        const contenidoExtra = boton.nextElementSibling;
-        contenidoExtra.classList.toggle('oculto');
-
-        //cambiar el texto del boton
-        if(contenidoExtra.classList.contains('oculto')){
-            boton.textContent='Ver más';
-        }else{
-            boton.textContent='Ver menos'
-        }
-    })
-})
-
-// contador de "añadir al carrito"
-let contadorCarrito=0;
-
 document.addEventListener("DOMContentLoaded", () => {
-    const botonesAgregar = document.querySelectorAll(".añadir-carrito");
-    
+    const botones = document.querySelectorAll('.boton-vermas');
+
+    botones.forEach(boton => {
+        boton.addEventListener('click', () => {
+            const tarjeta = boton.closest('.tarjeta-individual');
+            const contenidoExtra = tarjeta.querySelector('.cont-extra');
+            const estabaActivo = contenidoExtra.classList.contains('activo');
+
+            document.querySelectorAll('.cont-extra').forEach(c => c.classList.remove('activo'));
+            document.querySelectorAll('.boton-vermas').forEach(b => b.textContent = 'Ver más');
+
+            if (!estabaActivo) {
+                contenidoExtra.classList.add('activo');
+                boton.textContent = 'Ver menos';
+            }
+        })
+    })
+
+    // Añadir al carrito
+    let contadorCarrito = 0;
+    const botonesAgregar = document.querySelectorAll('.añadir-carrito');
+
     botonesAgregar.forEach(boton => {
-        boton.addEventListener("click", () => {
+        boton.addEventListener('click', () => {
             contadorCarrito++;
-            document.getElementById("contador-carrito").textContent= contadorCarrito;
+            document.getElementById('contador-carrito').textContent = contadorCarrito;
         })
     })
 })
