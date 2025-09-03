@@ -28,4 +28,4 @@
 - *CSS3*
 - *JavaScript*
 - *Bootstrap Icons*
-- *XAMPP*
+- *Vercel*
