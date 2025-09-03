@@ -11,7 +11,7 @@ function renderizarProductos(productos) {
         tarjeta.classList.add("tarjeta");
 
         const enlace = document.createElement("a");
-        enlace.href = `producto.html?producto=${index}`;
+        enlace.href = `producto.html?producto=${mueble._index}`;
 
         const titulo = document.createElement("h3");
         titulo.textContent = mueble.nombre;
@@ -39,6 +39,7 @@ function renderizarProductos(productos) {
 
 // Carga inicial del catálogo
 obtenerCatalogo().then((productos) => {
+    productos.forEach((mueble, index) => mueble._index = index);
     renderizarProductos(productos);
 
     formulario.addEventListener("submit", (e) => {
