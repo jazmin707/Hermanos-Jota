@@ -193,6 +193,14 @@ nav ul li a:hover {
     nav ul li a {
         font-size: 16px;
     }
+
+    .titulos{ 
+        font-size: 28px;
+    }
+
+    .subtitulos {
+        font-size: 17px; 
+    }
 }
 
 @media (max-width: 858px) {
@@ -234,6 +242,15 @@ nav ul li a:hover {
 
     .tarjeta {
         width: 90%;
+        margin: 0 auto;
+    }
+
+    .titulos{ 
+        letter-spacing: 0.08em; 
+    }
+
+    .subtitulos {
+        letter-spacing: 0.05em; 
     }
 }
 
@@ -254,10 +271,33 @@ nav ul li a:hover {
 
     .centrar-contenido {
         flex-direction: column;
+        padding: 0 10px;
     }
 
     .titulos {
         font-size: 20px;
+        padding: 0 10px;
+    }
+
+    .subtitulos {
+        font-size: 16px;
+        line-height: 1.6;
+        padding : 0 10px;
+    }
+
+    .busqueda {
+        flex: 1 1 auto;
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    #busquedas {
+        width: 100%;
+        margin-top: 10px;
+        font-size: 16px;
+        padding: 0 10px;
+        flex-direction: column;
     }
 
     .texto-principal,
@@ -603,25 +643,27 @@ footer .contacto-info p {
     border: 2px solid #C47A6D;
     border-radius: 8px;
     background-color: #F5E6D3;
-
+    flex: 1 1 300px;
+    max-width: 500px;
 }
 
 #busquedas {
     padding: 10px 15px;
     border-radius: 13px;
     font-family: "Inter", system-ui, sans-serif;
+    cursor: pointer;
 }
 
 #grilla-productos {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 5rem;
     justify-content: center;
     padding: 2rem;
 }
 
 .tarjeta {
-    width: 280px;
+    width: 350px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -637,4 +679,12 @@ footer .contacto-info p {
     width: 100%;
     height: 200px;
     object-fit: cover;
+}
+
+#precio {
+    font-weight: bold;
+    color: #A0522D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

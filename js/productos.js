@@ -9,6 +9,7 @@ const catalogoMuebles = [
         capacidad:"6 compartimentos interiores",
         destacado: true,
         imagen: "./imagenes/Aparador Uspallata.png",
+        precio: 600000,
     },
     {
         nombre: "Biblioteca Recoleta",
@@ -20,6 +21,7 @@ const catalogoMuebles = [
         capacidad:"5 estantes ajustables",
         destacado: false,
         imagen: "./imagenes/Biblioteca Recoleta.png",
+        precio: 800000,
     },
     {
         nombre: "Butaca Mendoza",
@@ -31,6 +33,7 @@ const catalogoMuebles = [
         confort:"Espuma alta densidad",
         destacado: true,
         imagen: "./imagenes/Butaca Mendoza.png",
+        precio: 50000,
     },
     {
         nombre: "Sillón Copacabana",
@@ -41,6 +44,7 @@ const catalogoMuebles = [
         garantia:"10 años en estructura",
         destacado: true,
         imagen: "./imagenes/Sillón Copacabana.png",
+        precio: 720000,
     },
     {
         nombre: "Mesa de Centro Araucaria",
@@ -52,6 +56,7 @@ const catalogoMuebles = [
         cargaMax:"25 kg distribuidos",
         destacado: true,
         imagen: "./imagenes/Mesa de Centro Araucaria.png",
+        precio: 450000,
     },
     {
         nombre: "Mesa de Noche Aconcagua",
@@ -63,6 +68,7 @@ const catalogoMuebles = [
         caracteristicas:"Cajón con cierre suave",
         destacado: false,
         imagen: "./imagenes/Mesa de Noche Aconcagua.png",
+        precio: 350000,
     },
     {
         nombre: "Cama Neuquén",
@@ -74,6 +80,7 @@ const catalogoMuebles = [
         caracteristicas:"Cabecero flotante acolchado",
         destacado: true,
         imagen: "./imagenes/Cama Neuquén.png",
+        precio: 1500000,
     },
     {
         nombre: "Sofá Patagonia",
@@ -84,6 +91,7 @@ const catalogoMuebles = [
         sostenibilidad:"Materiales 100% reciclables",
         destacado: false,
         imagen: "./imagenes/Sofá Patagonia.png",
+        precio: 1100000,
     },
     {
         nombre: "Mesa Comedor Pampa",
@@ -95,6 +103,7 @@ const catalogoMuebles = [
         extension:"Sistema de mariposa central",
         destacado: false,
         imagen: "./imagenes/Mesa Comedor Pampa.png",
+        precio: 990000,
     },
     {
         nombre: "Sillas Córdoba",
@@ -106,6 +115,7 @@ const catalogoMuebles = [
         incluye:"Set de 4 sillas",
         destacado: false,
         imagen: "./imagenes/Sillas Córdoba.png",
+        precio: 450000,
     },
     {
         nombre: "Escritorio Costa",
@@ -117,6 +127,7 @@ const catalogoMuebles = [
         cables:"Pasacables integrado",
         destacado: false,
         imagen: "./imagenes/Escritorio Costa.png",
+        precio: 640000,
     },
     {
         nombre: "Silla de Trabajo Belgrano",
@@ -128,6 +139,7 @@ const catalogoMuebles = [
         certificacion:"Ergonomía europea EN 1335",
         destacado: false,
         imagen: "./imagenes/Silla de Trabajo Belgrano.png",
+        precio: 400000,
     }
 ];
 
@@ -141,15 +153,17 @@ catalogoMuebles.forEach((mueble, index) => {
         const titulo = document.createElement("h3");
         titulo.textContent = mueble.nombre;
         titulo.classList.add("subtitulos");
-            const descripcion = document.createElement("p");
-        descripcion.textContent = mueble.descripcion;
-        descripcion.classList.add("texto-principal");
+        const precio = document.createElement("p");
+        precio.textContent = mueble.precio;
+        precio.classList.add("precio");
+        precio.id = "precio";
         const img = document.createElement("img");
         img.src = mueble.imagen;
         img.alt = mueble.nombre;
         const div = document.createElement("div");
         div.appendChild(titulo);
         div.appendChild(img);
+        div.appendChild(precio);
         enlace.appendChild(div);
         tarjeta.appendChild(enlace);
         contenedor.appendChild(tarjeta);
@@ -173,16 +187,17 @@ formulario.addEventListener("submit", (e) => {
         const titulo = document.createElement("h3");
         titulo.textContent = mueble.nombre;
         titulo.classList.add("subtitulos");
-        const descripcion = document.createElement("p");
-        descripcion.textContent = mueble.descripcion;
-        descripcion.classList.add("texto-principal");
+        const precio = document.createElement("p");
+        precio.textContent = mueble.precio;
+        precio.classList.add("precio");
+        precio.id = "precio";
         const img = document.createElement("img");
         img.src = mueble.imagen;
         img.alt = mueble.nombre;
         const div = document.createElement("div");
         div.appendChild(titulo);
-        div.appendChild(descripcion);
         div.appendChild(img);
+        div.appendChild(precio);
         enlace.appendChild(div);
         tarjeta.appendChild(enlace);
         contenedor.appendChild(tarjeta);
