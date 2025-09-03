@@ -270,6 +270,7 @@ nav ul li a:hover {
         font-size: 16px;
         padding: 6px 12px;
         margin-bottom: 10px;
+       
     }
 
     .botones {
@@ -638,3 +639,6 @@ footer .contacto-info p {
     height: 200px;
     object-fit: cover;
 }
+
+/* AGREGAR AL MENU -------------------------------------------*/
+/* z-index: 1000;*/
