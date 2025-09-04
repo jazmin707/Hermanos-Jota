@@ -1,94 +1,64 @@
-function renderDestacados() {
-    const contenedor = document.getElementById("productos-destacados");
+document.addEventListener("DOMContentLoaded", () => {
+    const contenedor = document.getElementById("contenedor-galeria");
 
-    // Filtrar solo los productos destacados
-    const destacados = catalogoProducto.filter(producto => producto.destacado);
+    obtenerCatalogo().then(catalogo => {
+        const destacados = catalogo
+            .map((producto, index) => ({ ...producto, index })) // Agregamos el índice
+            .filter(producto => producto.destacado);
 
-    // Limpiar contenedor
-    contenedor.innerHTML = "";
+        destacados.forEach(producto => {
+            const tarjeta = document.createElement("div");
+            tarjeta.classList.add("tarjeta-individual");
 
-    // Recorrer y generar HTML de cada producto
-    destacados.forEach(producto => {
-        const productoHTML = `
-            <div class="producto">
+            tarjeta.innerHTML = `
+                <img src="${producto.imagen}" alt="${producto.nombre}" width="200" height="200">
                 <h3>${producto.nombre}</h3>
-                <img src="./imagenes/${producto.nombre}.png" alt="${producto.nombre}" width="60" height="60">
-                <p>${producto.descripcion}</p>
-                <p><strong>Medidas:</strong> ${producto.medidas} <br> <strong>Materiales:</strong> ${producto.materiales}</p>
-            </div>
-        `;
-        contenedor.innerHTML += productoHTML;
-    });
-}
+                <button class="boton-vermas">Ver más</button>
+                <div class="cont-extra oculto">
+                    <p>${producto.descripcion}</p>
+                    <button class="añadir-carrito">Añadir al carrito</button>
+                    <a href="producto.html?producto=${producto.index}" class="ver-producto">Ver producto</a>
+                </div>
+            `;
 
-// Ejecutar cuando la página termine de cargar
-document.addEventListener("DOMContentLoaded", renderDestacados);
-    /*
-//-boton "ver mas" y que salga la descripcion y especificaciones del producto o "añadir al carrito"
-document.addEventListener("DOMContentLoaded", () => {
-    const botones = document.querySelectorAll('.boton-vermas');
-
-    botones.forEach(boton => {
-        boton.addEventListener('click', () => {
-            const tarjeta = boton.closest('.tarjeta-individual');
-            const contenidoExtra = tarjeta.querySelector('.cont-extra');
-            const estabaActivo = contenidoExtra.classList.contains('activo');
-
-            document.querySelectorAll('.cont-extra').forEach(c => c.classList.remove('activo'));
-            document.querySelectorAll('.boton-vermas').forEach(b => b.textContent = 'Ver más');
-
-            if (!estabaActivo) {
-                contenidoExtra.classList.add('activo');
-                boton.textContent = 'Ver menos';
-            }
-        })
-    })
-
-    // Añadir al carrito
-    let contadorCarrito = 0;
-    const botonesAgregar = document.querySelectorAll('.añadir-carrito');
-
-    botonesAgregar.forEach(boton => {
-        boton.addEventListener('click', () => {
-            contadorCarrito++;
-            document.getElementById('contador-carrito').textContent = contadorCarrito;
-        })
-    })
-})
-*/
-document.addEventListener("DOMContentLoaded", () => {
-    const botones = document.querySelectorAll('.boton-vermas');
-
-    botones.forEach(boton => {
-        boton.addEventListener('click', () => {
-            const tarjeta = boton.closest('.tarjeta-individual');
-            const contenidoExtra = tarjeta.querySelector('.cont-extra');
-            const estabaActivo = contenidoExtra.classList.contains('activo');
-
-            // Cerrar todos los demás cuadros abiertos
-            document.querySelectorAll('.cont-extra').forEach(c => {
-                c.classList.remove('activo');
-                c.classList.add('oculto');
-            });
-            document.querySelectorAll('.boton-vermas').forEach(b => b.textContent = 'Ver más');
-
-            // Si no estaba activo, mostrar el contenido
-            if (!estabaActivo) {
-                contenidoExtra.classList.add('activo');
-                contenidoExtra.classList.remove('oculto');
-                boton.textContent = 'Ver menos';
-            }
+            contenedor.appendChild(tarjeta);
         });
-    });
 
-    // Añadir al carrito
-    let contadorCarrito = 0;
-    const botonesAgregar = document.querySelectorAll('.añadir-carrito');
+        // Funcionalidad "Ver más"
+        const botonesVerMas = document.querySelectorAll('.boton-vermas');
 
-    botonesAgregar.forEach(boton => {
-        boton.addEventListener('click', () => {
-            contadorCarrito++;
-            document.getElementById('contador-carrito').textContent = contadorCarrito;
+        botonesVerMas.forEach(boton => {
+            boton.addEventListener('click', () => {
+                const tarjeta = boton.closest('.tarjeta-individual');
+                const contenidoExtra = tarjeta.querySelector('.cont-extra');
+                const estabaActivo = contenidoExtra.classList.contains('activo');
+
+                // Ocultar todas las demás
+                document.querySelectorAll('.cont-extra').forEach(c => {
+                    c.classList.remove('activo');
+                    c.classList.add('oculto');
+                });
+
+                document.querySelectorAll('.boton-vermas').forEach(b => b.textContent = 'Ver más');
+
+                // Si no estaba activa, mostrarla
+                if (!estabaActivo) {
+                    contenidoExtra.classList.add('activo');
+                    contenidoExtra.classList.remove('oculto');
+                    boton.textContent = 'Ver menos';
+                }
+            });
+        });
+
+        // Contador del carrito (simple)
+        let contadorCarrito = 0;
+        const botonesAgregar = document.querySelectorAll('.añadir-carrito');
+
+        botonesAgregar.forEach(boton => {
+            boton.addEventListener('click', () => {
+                contadorCarrito++;
+                document.getElementById('contador-carrito').textContent = contadorCarrito;
+            });
         });
     });
 });
