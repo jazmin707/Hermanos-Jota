@@ -65,19 +65,21 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
     background: #C47A6D;
-    padding: 0 20px;
+    padding: 2rem 0;
+    z-index: 10000;
     position: fixed;
+    left: 0;
     top: 0;
+    right: 0;
+    height: 100px;
     width: 100%;
-    /*para que no quede tan abajo el hero*/
-    z-index: 1000;
 }
 
 .logo img {
     width: 120px;
-
+    height: auto;
+    padding: 10px;
 }
 
 .carrito {
@@ -85,7 +87,8 @@ header {
     align-items: center;
     gap: 10px;
     color: #F5E6D3;
-    font-weight: bold;
+    font-weight: bold;     
+    padding: 0 20px;
 }
 
 .carrito i {
@@ -190,12 +193,7 @@ nav ul li a:hover {
 }
 
 /* RESPONSIVE --------------------------------------------------------------------*/
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
+
 @media (max-width: 952px) {
     nav ul li a {
         font-size: 16px;
@@ -495,11 +493,8 @@ main p {
 /* ----------------- HERO ----------------- */
 .hero {
     background-image: url(../imagenes/Aparador\ Uspallata.png);
-    /*Imagen de fondo del hero*/
     background-size: cover;
-    /*cubre todo sin deformarse*/
-    background-position: center;
-    /*centrada*/
+    background-position: top;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -507,6 +502,7 @@ main p {
     text-align: center;
     padding: 0 20px;
     z-index: 1000;
+    margin-top: 80px;
 }
 
 .hero-content {
@@ -756,8 +752,8 @@ main p {
   border-radius: 50%;
   padding: 0.2rem 0.5rem;
   position: absolute;
-  top: -10px;
-  right: -10px;
+  top: 10px;
+  right: 7px;
   font-size: 0.8rem;
 }
 
