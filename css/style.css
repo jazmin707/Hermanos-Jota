@@ -406,6 +406,7 @@ main {
     padding: 0 20px;
     font-family: "Inter", system-ui, sans-serif;
     color: #000;
+    padding-top: 80px;
 }
 
 main h1 {
@@ -500,9 +501,7 @@ main p {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 0 20px;
     z-index: 1000;
-    margin-top: 80px;
 }
 
 .hero-content {
@@ -774,8 +773,9 @@ main p {
   transition: right 0.3s ease;
   display: flex;
   flex-direction: column;
-  z-index: 10000;
- 
+  z-index: 1000;
+  padding-top: 110px;
+
 }
 
 .carrito-lateral.activo {
