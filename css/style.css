@@ -65,20 +65,19 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
+    height: 80px;
     background: #C47A6D;
-    padding: 2rem 0;
-    z-index: 9999;
+    padding: 0 20px;
     position: fixed;
-    left: 0;
     top: 0;
-    right: 0;
+    width: 100%;
+    /*para que no quede tan abajo el hero*/
+    z-index: 1000;
 }
 
 .logo img {
     width: 120px;
-    height: auto;
-    padding: 10px;
+
 }
 
 .carrito {
@@ -87,7 +86,6 @@ header {
     gap: 10px;
     color: #F5E6D3;
     font-weight: bold;
-    padding: 0 15px;
 }
 
 .carrito i {
@@ -100,6 +98,7 @@ nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    z-index: 999;
 }
 
 nav ul li {
@@ -191,22 +190,23 @@ nav ul li a:hover {
 }
 
 /* RESPONSIVE --------------------------------------------------------------------*/
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 @media (max-width: 952px) {
     nav ul li a {
         font-size: 16px;
     }
 
-    .titulos {
+    .titulos{ 
         font-size: 28px;
     }
 
     .subtitulos {
-        font-size: 17px;
-    }
-
-    .hero {
-        background-position: top;
-        margin-top: 80px;
+        font-size: 17px; 
     }
 }
 
@@ -252,21 +252,16 @@ nav ul li a:hover {
         margin: 0 auto;
     }
 
-    .titulos {
-        letter-spacing: 0.08em;
+    .titulos{ 
+        letter-spacing: 0.08em; 
     }
 
     .subtitulos {
-        letter-spacing: 0.05em;
+        letter-spacing: 0.05em; 
     }
 }
 
 @media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
     .detalle-producto .bloque {
         flex-direction: column;
         text-align: center;
@@ -294,7 +289,7 @@ nav ul li a:hover {
     .subtitulos {
         font-size: 16px;
         line-height: 1.6;
-        padding: 0 10px;
+        padding : 0 10px;
     }
 
     .busqueda {
@@ -322,93 +317,87 @@ nav ul li a:hover {
         font-size: 16px;
         padding: 6px 12px;
         margin-bottom: 10px;
-
+       
     }
 
     .botones {
         padding: 12px 20px;
         font-size: 14px;
     }
-
+    
 }
-
 /* ---------- FOOTER GENERAL ---------- */
 footer {
-    background-color: #F5E6D3;
-    /* Alabastro cálido */
-    color: #000;
-    padding: 50px 20px;
-    font-family: "Inter", sans-serif;
-    line-height: 1.6;
+  background-color: #F5E6D3; /* Alabastro cálido */
+  color: #000;
+  padding: 50px 20px;
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
 }
 
 /* Contenedor flexible */
 .footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* ---------- COLUMNAS ---------- */
 .footer-col {
-    flex: 1 1 220px;
-    min-width: 200px;
+  flex: 1 1 220px;
+  min-width: 200px;
 }
 
 .footer-col h3 {
-    font-family: "Playfair Display", Georgia, serif;
-    /* Tipografía secundaria */
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: #A0522D;
-    /* Siena tostado */
-    margin-bottom: 15px;
-    font-size: 1.1rem;
+  font-family: "Playfair Display", Georgia, serif; /* Tipografía secundaria */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #A0522D; /* Siena tostado */
+  margin-bottom: 15px;
+  font-size: 1.1rem;
 }
 
 .footer-col p,
 .footer-col li,
 .footer-col a {
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    font-size: 11pt;
-    margin-bottom: 10px;
-    color: #000;
-    text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 11pt;
+  margin-bottom: 10px;
+  color: #000;
+  text-decoration: none;
 }
 
 /* ---------- MAPA DE SITIO ---------- */
 .footer-menu {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .footer-menu li {
-    margin: 6px 0;
+  margin: 6px 0;
 }
 
 .footer-menu a:hover {
-    color: #D4A437;
-    /* Vara de oro */
-    font-weight: 500;
+  color: #D4A437; /* Vara de oro */
+  font-weight: 500;
 }
 
 /* ---------- LÍNEA FINAL ---------- */
 .footer-bottom {
-    text-align: center;
-    margin-top: 40px;
-    padding-top: 15px;
-    border-top: 1px solid rgba(0, 0, 0, 0.2);
-    font-size: 0.9rem;
-    font-family: "Inter", sans-serif;
-    font-weight: 300;
-    /* Light para la nota legal */
-    letter-spacing: 0.02em;
-    color: #333;
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(0,0,0,0.2);
+  font-size: 0.9rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 300; /* Light para la nota legal */
+  letter-spacing: 0.02em;
+  color: #333;
 }
 
 /* ----------------- CONTACTO ----------------- */
@@ -506,14 +495,18 @@ main p {
 /* ----------------- HERO ----------------- */
 .hero {
     background-image: url(../imagenes/Aparador\ Uspallata.png);
+    /*Imagen de fondo del hero*/
     background-size: cover;
+    /*cubre todo sin deformarse*/
     background-position: center;
+    /*centrada*/
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 0 20px
+    padding: 0 20px;
+    z-index: 1000;
 }
 
 .hero-content {
@@ -667,7 +660,7 @@ main p {
     right: 10px;
     background: white;
     padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
     display: none;
     border-radius: 4px;
 }
@@ -691,11 +684,9 @@ main p {
     transition: background-color 0.3s;
     background-color: #C47A6D;
 }
-
-.boton-vermas:hover,
-/*al pasar el mouse, color mas oscuro*/
+.boton-vermas:hover, /*al pasar el mouse, color mas oscuro*/
 .añadir-carrito:hover {
-    background-color: #A86255;
+  background-color: #A86255;
 }
 
 
@@ -754,4 +745,105 @@ main p {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/*--------------------------------------------Cariito*/
+
+
+#contador-carrito {
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 0.2rem 0.5rem;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 0.8rem;
+}
+
+/* Carrito lateral */
+.carrito-lateral {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 350px;
+  height: 100%;
+  background: #F5E6D3;
+  box-shadow: -4px 0 10px rgba(0,0,0,0.2);
+  transition: right 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.carrito-lateral.activo {
+  right: 0;
+}
+
+.carrito-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.cerrar-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.carrito-items {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.item-carrito {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.item-carrito img {
+  width: 50px;
+  height: auto;
+  margin-right: 0.5rem;
+}
+
+.item-info {
+  flex: 1;
+}
+
+.controles {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.controles button {
+  background: #eee;
+  border: none;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+}
+
+.carrito-footer {
+  padding: 1rem;
+  border-top: 1px solid #ddd;
+  text-align: center;
+}
+
+.boton-comprar {
+  background: #A0522D;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
 }
