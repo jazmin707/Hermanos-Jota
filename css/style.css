@@ -665,20 +665,25 @@ main p {
 */
 .cont-extra {
     position: absolute;
-    bottom: 10px;
+    bottom: 50px;
     left: 10px;
     right: 10px;
     background: white;
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    display: none;
+    /*display: none;*/
     border-radius: 4px;
 }
-
+.cont-extra{
+    display: block;
+}
+.cont-extra p{
+    margin: 10px 0 0 0;
+}
 .oculto {
     display: none;
 }
-
+.ver-producto,
 .boton-vermas,
 .añadir-carrito {
     margin-top: 1rem;

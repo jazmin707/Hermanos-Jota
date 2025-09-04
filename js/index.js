@@ -23,7 +23,7 @@ function renderDestacados() {
 
 // Ejecutar cuando la página termine de cargar
 document.addEventListener("DOMContentLoaded", renderDestacados);
-    
+    /*
 //-boton "ver mas" y que salga la descripcion y especificaciones del producto o "añadir al carrito"
 document.addEventListener("DOMContentLoaded", () => {
     const botones = document.querySelectorAll('.boton-vermas');
@@ -55,3 +55,40 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     })
 })
+*/
+document.addEventListener("DOMContentLoaded", () => {
+    const botones = document.querySelectorAll('.boton-vermas');
+
+    botones.forEach(boton => {
+        boton.addEventListener('click', () => {
+            const tarjeta = boton.closest('.tarjeta-individual');
+            const contenidoExtra = tarjeta.querySelector('.cont-extra');
+            const estabaActivo = contenidoExtra.classList.contains('activo');
+
+            // Cerrar todos los demás cuadros abiertos
+            document.querySelectorAll('.cont-extra').forEach(c => {
+                c.classList.remove('activo');
+                c.classList.add('oculto');
+            });
+            document.querySelectorAll('.boton-vermas').forEach(b => b.textContent = 'Ver más');
+
+            // Si no estaba activo, mostrar el contenido
+            if (!estabaActivo) {
+                contenidoExtra.classList.add('activo');
+                contenidoExtra.classList.remove('oculto');
+                boton.textContent = 'Ver menos';
+            }
+        });
+    });
+
+    // Añadir al carrito
+    let contadorCarrito = 0;
+    const botonesAgregar = document.querySelectorAll('.añadir-carrito');
+
+    botonesAgregar.forEach(boton => {
+        boton.addEventListener('click', () => {
+            contadorCarrito++;
+            document.getElementById('contador-carrito').textContent = contadorCarrito;
+        });
+    });
+});
