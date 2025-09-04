@@ -1,5 +1,7 @@
+// Obtiene el parámetro 'producto' de la URL
 const params = new URLSearchParams(window.location.search);
 const productoId = parseInt(params.get("producto"));
+
 
 obtenerCatalogo().then((catalogo) => {
     if (!isNaN(productoId) && productoId >= 0 && productoId < catalogo.length) {
