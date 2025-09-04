@@ -770,12 +770,15 @@ main p {
   display: flex;
   flex-direction: column;
   z-index: 10000;
+ 
 }
 
 .carrito-lateral.activo {
   right: 0;
 }
-
+i{
+    cursor: pointer;
+}
 .carrito-header {
   display: flex;
   justify-content: space-between;
