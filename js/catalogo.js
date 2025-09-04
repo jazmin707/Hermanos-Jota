@@ -144,10 +144,17 @@ const catalogoProducto = [
 ];
 
 // Simulación de carga asíncrona
+let catalogoGlobal = [];
+
 function obtenerCatalogo() {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
         setTimeout(() => {
-            resolve(catalogoProducto); 
-        }, 500);
+            resolve(catalogoProducto);
+        }, 300);
     });
 }
+
+obtenerCatalogo().then(data => {
+    catalogoGlobal = data;
+});
+
