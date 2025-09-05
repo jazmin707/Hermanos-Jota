@@ -671,26 +671,28 @@ main p {
     display: none;
 }
 
-.ver-producto,
 .boton-vermas,
-.añadir-carrito {
-    margin-top: 1rem;
+.ver-producto {
+    font-weight: normal;
+    font-size: 0.9rem;
     padding: 10px 20px;
     color: #F5E6D3;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     font-family: "Inter", sans-serif;
-    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     transition: background-color 0.3s;
     background-color: #C47A6D;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 2px;
 }
 
 .boton-vermas:hover,
 /*al pasar el mouse, color mas oscuro*/
-.añadir-carrito:hover {
+.ver-producto:hover {
     background-color: #A86255;
 }
 

@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 <button class="boton-vermas">Ver más</button>
                 <div class="cont-extra oculto">
                     <p>${producto.descripcion}</p>
-                    <button class="añadir-carrito">Añadir al carrito</button>
                     <a href="producto.html?producto=${producto.index}" class="ver-producto">Ver producto</a>
                 </div>
             `;
