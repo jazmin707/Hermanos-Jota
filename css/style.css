@@ -191,141 +191,7 @@ nav ul li a:hover {
     text-transform: capitalize;
 }
 
-/* RESPONSIVE --------------------------------------------------------------------*/
 
-@media (max-width: 952px) {
-    nav ul li a {
-        font-size: 16px;
-    }
-
-    .titulos {
-        font-size: 28px;
-    }
-
-    .subtitulos {
-        font-size: 17px;
-    }
-}
-
-@media (max-width: 858px) {
-    .checkbtn {
-        display: block;
-    }
-
-    nav ul {
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: #C47A6D;
-        top: 80px;
-        left: -100%;
-        text-align: center;
-        flex-direction: column;
-        justify-content: center;
-        transition: all .5s;
-    }
-
-    nav ul li {
-        margin: 30px 0;
-    }
-
-    nav ul li a {
-        font-size: 20px;
-
-    }
-
-    nav ul li a:hover,
-    nav ul li a.activo {
-        background: none;
-        letter-spacing: 2px;
-    }
-
-    #check:checked~ul {
-        left: 0;
-    }
-
-    .tarjeta {
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    .titulos {
-        letter-spacing: 0.08em;
-    }
-
-    .subtitulos {
-        letter-spacing: 0.05em;
-    }
-}
-
-@media (max-width: 768px) {
-    .detalle-producto .bloque {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .detalle-producto img {
-        width: 90%;
-        margin-bottom: 20px;
-    }
-
-    .bloque div {
-        padding: 0 10px;
-    }
-
-    .centrar-contenido {
-        flex-direction: column;
-        padding: 0 10px;
-    }
-
-    .titulos {
-        font-size: 20px;
-        padding: 0 10px;
-    }
-
-    .subtitulos {
-        font-size: 16px;
-        line-height: 1.6;
-        padding: 0 10px;
-    }
-
-    .busqueda {
-        flex: 1 1 auto;
-        width: 100%;
-        padding: 12px;
-        font-size: 16px;
-    }
-
-    #busquedas {
-        width: 100%;
-        margin-top: 10px;
-        font-size: 16px;
-        padding: 0 10px;
-        flex-direction: column;
-    }
-
-    .texto-principal,
-    .detalles {
-        font-size: 14px;
-        padding: 0 10px;
-    }
-
-    .precio {
-        font-size: 16px;
-        padding: 6px 12px;
-        margin-bottom: 10px;
-
-    }
-
-    .botones {
-        padding: 12px 20px;
-        font-size: 14px;
-    }
-
-    hero {
-        background-position: top;
-    }
-}
 
 /* ---------- FOOTER GENERAL ---------- */
 footer {
@@ -867,4 +733,139 @@ i {
 .carrito-footer span{
     color: black;
     font-weight: 600;
+}
+/* RESPONSIVE --------------------------------------------------------------------*/
+
+@media (max-width: 952px) {
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .titulos {
+        font-size: 28px;
+    }
+
+    .subtitulos {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #C47A6D;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        margin: 30px 0;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+
+    }
+
+    nav ul li a:hover,
+    nav ul li a.activo {
+        background: none;
+        letter-spacing: 2px;
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+
+    .tarjeta {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .titulos {
+        letter-spacing: 0.08em;
+    }
+
+    .subtitulos {
+        letter-spacing: 0.05em;
+    }
+}
+
+@media (max-width: 768px) {
+    .detalle-producto .bloque {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .detalle-producto img {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .bloque div {
+        padding: 0 10px;
+    }
+
+    .centrar-contenido {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    .titulos {
+        font-size: 20px;
+        padding: 0 10px;
+    }
+
+    .subtitulos {
+        font-size: 16px;
+        line-height: 1.6;
+        padding: 0 10px;
+    }
+
+    .busqueda {
+        flex: 1 1 auto;
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    #busquedas {
+        width: 100%;
+        margin-top: 10px;
+        font-size: 16px;
+        padding: 0 10px;
+        flex-direction: column;
+    }
+
+    .texto-principal,
+    .detalles {
+        font-size: 14px;
+        padding: 10px 10px;
+    }
+
+    .precio {
+        font-size: 16px;
+        padding: 6px 12px;
+        margin-bottom: 10px;
+
+    }
+
+    .botones {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    hero {
+        background-position: top;
+    }
 }
