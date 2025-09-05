@@ -121,5 +121,11 @@ document.querySelector("#btn-comprar").addEventListener("click", () => {
     actualizarContador();
     renderizarCarrito();
     carritoLateral.classList.remove("activo");
+
+    //  Si estoy en la página de producto, actualizo el botón
+    const botonToggle = document.querySelector("#botonToggle");
+    if (botonToggle) {
+        botonToggle.textContent = "Agregar al carrito";
+    }
 });
 
