@@ -110,10 +110,16 @@ function renderizarCarrito() {
 
 // Comprar
 document.querySelector("#btn-comprar").addEventListener("click", () => {
-    alert("¡Gracias por tu compra!");
+    if (carrito.length === 0) {
+        alert("Tu carrito está vacío, esperando la pieza perfecta para vos");
+        return;
+    }
+
+    alert("Gracias por confiar en nosotros. Tu compra ya está en camino.");
     carrito = [];
     guardarCarrito();
     actualizarContador();
     renderizarCarrito();
     carritoLateral.classList.remove("activo");
 });
+
