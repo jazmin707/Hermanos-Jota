@@ -798,7 +798,7 @@ i {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #D4A437;
 }
 
 .cerrar-btn {
@@ -819,7 +819,7 @@ i {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 1rem;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #D4A437;
     padding-bottom: 0.5rem;
 }
 
@@ -848,16 +848,23 @@ i {
 }
 
 .carrito-footer {
-    padding: 1rem;
-    border-top: 1px solid #ddd;
+    padding: 10px;
+    border-top: 1px solid #D4A437;
     text-align: center;
 }
 
 .boton-comprar {
-    background: #A0522D;
-    color: #fff;
-    border: none;
-    padding: 0.8rem 1.2rem;
+
+    padding: 10px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 13px;
+}
+.carrito-footer p{
+    padding: 10px;
+    color: #C47A6D;
+    font-weight: 800;
+}
+.carrito-footer span{
+    color: black;
+    font-weight: 600;
 }
